@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Systems/Game/Game.cs" type="Script" id=1]
+[ext_resource path="res://UI/MainMenu/MainMenu.tscn" type="PackedScene" id=2]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+_mainMenuPath = NodePath("UserInterface/MainMenu")
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" parent="UserInterface" instance=ExtResource( 2 )]
+visible = false
